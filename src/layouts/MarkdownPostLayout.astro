@@ -10,31 +10,13 @@ const { frontmatter } = Astro.props;
 
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} /> 
 
-  <div class="tags">
+  <div class="flex flex-wrap my-0 mx-auto">
     {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+      <p class="dark:bg-violet-400 bg-gray-100 text-sm py-2 px-4 m-1 border-solid border border-blue-500 hover:border-red-500 hover:bg-red-100 rounded-sm">
+        <a href={`/tags/${tag}`} class="text-blue-600 hover:text-red-800">{tag}</a>
+      </p>
     ))}
   </div>
 
   <slot />
 </BaseLayout>
-<style>
-  a {
-    color: #00539F;
-  }
-            
-  .tags {
-    display: flex; 
-    flex-wrap: wrap; 
-    margin: 0 auto;  
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
-</style>
