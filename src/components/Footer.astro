@@ -1,8 +1,14 @@
 ---
 import Social from './Social.astro';
+
+const currentYear = new Date().getFullYear();
 ---
-<footer class="flex gap-4 mt-8">
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+<footer class="container flex sm:flex-row flex-col justify-between items-center mb-8 sm:mb-4 mx-4">
+<!--<footer class="flex gap-4 mt-8">-->
+  <div class="my-4">© Copyright {currentYear}</div>
+  <div>
+    <Social platform="twitter" username="astrodotbuild" />
+    <Social platform="github" username="withastro" />
+    <Social platform="youtube" username="astrodotbuild" />
+  </div>
 </footer>
