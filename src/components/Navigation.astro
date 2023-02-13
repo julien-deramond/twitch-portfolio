@@ -1,8 +1,9 @@
 ---
+import NavigationLink from "./NavigationLink.astro";
 ---
-<div class="nav-links text-black dark:text-white">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
-  <a href="/tags/">Tags</a>
+<div class="nav-links text-black dark:text-white bg-red-300 sm:bg-blue-300 hidden sm:block inline-block w-full sm:w-auto sm:m-0 relative sm:static sm:top-20 sm:left-12 ml-[5em]">
+  <NavigationLink url="/" label="Home" />
+  <NavigationLink url="/about" label="About" />
+  <NavigationLink url="/blog" label="Blog" />
+  <NavigationLink url="/tags" label="Tags" />
 </div>
